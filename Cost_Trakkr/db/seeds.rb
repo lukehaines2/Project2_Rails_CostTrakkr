@@ -19,17 +19,17 @@ u5 = User.create!(name: "Gui", budget: 1000, debts: 50)
 
 # events
 e1 = Event.create!(name: "lunch with group", date: Date.new(2015, 9, 18), location: "brick lane", cost: 80)
-e2 = Event.create!(name: "lunch with group", date: Date.new(2015, 9, 18), location: "brick lane", cost: 80)
-e3 = Event.create!(name: "lunch with group", date: Date.new(2015, 9, 18), location: "brick lane", cost: 80)
-e4 = Event.create!(name: "lunch with group", date: Date.new(2015, 9, 18), location: "brick lane", cost: 80)
-e5 = Event.create!(name: "lunch with group", date: Date.new(2015, 9, 18), location: "brick lane", cost: 80)
+e2 = Event.create!(name: "dinner with group", date: Date.new(2015, 9, 18), location: "spitalfields market", cost: 60)
+e3 = Event.create!(name: "morning coffee", date: Date.new(2014, 10, 28), location: "doppio", cost: 2.40)
+e4 = Event.create!(name: "travel", date: Date.new(2015, 9, 18), location: "train", cost: 7.90)
+e5 = Event.create!(name: "lunch on own", date: Date.new(2014, 9, 18), location: "brick lane", cost: 3)
 
 # payments
-p1 = Payment.create!(value: 20)
-p2 = Payment.create!(value: 10)
-p3 = Payment.create!(value: 50)
-p4 = Payment.create!(value: 30)
-p5 = Payment.create!(value: 25)
+p1 = Payment.create!(amount: 20)
+p2 = Payment.create!(amount: 10)
+p3 = Payment.create!(amount: 50)
+p4 = Payment.create!(amount: 30)
+p5 = Payment.create!(amount: 25)
 
 
 
