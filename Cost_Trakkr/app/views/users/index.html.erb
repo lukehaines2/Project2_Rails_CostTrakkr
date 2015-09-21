@@ -1,6 +1,11 @@
-I'm hoping this can be seen as the homepage but not sure
+<h1>Welcome to Cost Trakkr!</h1>
+<h2>Please select wether you would like to track costs for an event, or for a user.</h2>
 
+Existing Users:
 <% @users.each do |user| %>
   <%= link_to(user.name, user) %>
 <% end %>
 
+<p>Navigation:</p>
+<p><%= link_to "Users", users_path %></p>
+<p><%= link_to "Payments", payments_path %></p>

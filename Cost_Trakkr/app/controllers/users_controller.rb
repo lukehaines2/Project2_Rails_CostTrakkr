@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    user = User.new(params.require(:user).permit(:name))
+    user = User.new(params.require(:user).permit(:name, :budget, :debts))
 
     if user.save
       redirect_to user
