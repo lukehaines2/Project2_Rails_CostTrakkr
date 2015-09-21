@@ -1,13 +1,17 @@
 class PaymentsController < ApplicationController
 
+  def index
+    @payments = Payment.all
+  end
+
  def new
     @payment = Payment.new
-    @hotel = User.find(params[:user_id])
+    @user_payment = User.find(params[:user_id])
   end
 
   def create
     user = User.find(params[:user_id])
-    payment = Review.new(params.require(:payment).permit(:description, :rating))
+    payment = Payment.new(params.require(:payment).permit(:description, :rating))
 
     user.payments << payment
 
