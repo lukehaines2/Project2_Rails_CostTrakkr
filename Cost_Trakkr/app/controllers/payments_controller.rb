@@ -6,12 +6,12 @@ class PaymentsController < ApplicationController
 
  def new
     @payment = Payment.new
-    @user_payment = User.find(params[:user_id])
+    # @user_payment = User.find(params[:user_id])
   end
 
   def create
     user = User.find(params[:user_id])
-    payment = Payment.new(params.require(:payment).permit(:description, :rating))
+    payment = Payment.new(params.require(:payment).permit(:amount))
 
     user.payments << payment
 
