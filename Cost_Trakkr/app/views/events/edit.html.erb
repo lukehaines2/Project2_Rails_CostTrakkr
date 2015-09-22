@@ -1,4 +1,4 @@
-<%= form_for @events do |form| %>
+<%= form_for @event do |form| %>
   <%= form.label :name %>
   <%= form.text_field :name %>
   <br>
@@ -11,6 +11,6 @@
   <%= form.label :cost %>
   <%= form.text_field :cost %>
   <br>
-  <%= form.submit 'Submit' %>
+  <%= form.submit 'Update' %>
 
 <% end %>
