@@ -1,9 +1,13 @@
 
 <div id="existing-events">
+
   <h3>Existing Users</h3>
   <ul>
   <% @users.each do |user| %>
     <li class="individual-events"><%= link_to(user.name, user) %></li>
   <% end %>
   </ul>
+  <br><div class="centering">
+  <a href="http://localhost:3000/users/new" class="button radius">NEW USER</a>
+  </div>
 </div>

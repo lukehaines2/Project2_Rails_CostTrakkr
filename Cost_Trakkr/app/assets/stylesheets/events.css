@@ -2,12 +2,13 @@
   width: 70%;
   margin: 0 auto;
   text-align: center;
-  margin-top: 5.5%;
+  margin-top: 3.5%;
 }
 
 .individual-events {
   list-style-type: none;
   margin-bottom: 2%;
+  font-size: 18px;
 }
 
 
@@ -20,4 +21,8 @@
 
 .event-button {
   display: inline-block;
+}
+
+.centering {
+  text-align: center;
 }

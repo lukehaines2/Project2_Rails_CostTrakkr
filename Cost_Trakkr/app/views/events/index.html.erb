@@ -1,8 +1,9 @@
 <div id="existing-events">
-  <h3>Existing Events:</h3>
+  <h3>Existing Events</h3>
   <ul>
   <% @events.each do |event| %>
     <li class="individual-events"><%= link_to(event.name, event) %></li>
   <% end %>
   </ul>
+ <br><center><a href="http://localhost:3000/events/new" class="button radius">NEW EVENT</a></center>
 </div>
