@@ -1,7 +1,19 @@
-<%= form_for [@payment] do |form| %>
+<%= form_for [@event, @payment] do |form| %>
   
+  <% if @payment.errors.any? %>
+    <% @payment.errors.full_messages.each do |msg| %>
+      <div data-alert class="alert-box secondary">
+        <%= msg %>
+        <a href="#" class="close">&times;</a>
+      </div>
+    <% end %>
+  <% end %>
+
   <%= form.label :amount %>
   <%= form.text_field :amount %>
+  
+  <%= form.label :user_id, "Please select a user" %>
+  <%= form.collection_select(:user_id, User.all, :id, :name) %>
   <br>
   <%= form.submit 'Submit' %>
   

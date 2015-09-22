@@ -34,7 +34,9 @@
           <a href="http://localhost:3000/users">Users</a>
           <ul class="dropdown">
             <li class="active"><a href="http://localhost:3000/users/new">New User</a></li>
-            <li><a href="http://localhost:3000/users">All users</a></li>
+            <li>
+              <%= link_to "All Users", users_path %>
+            </li>
             </ul>
           </li>
 
@@ -42,17 +44,17 @@
           <a href="http://localhost:3000/events">Events</a>
           <ul class="dropdown">
             <li class="active"><a href="http://localhost:3000/events/new">New Event</a></li>
-            <li><a href="http://localhost:3000/events">All Events</a></li>
+            <li><%= link_to "All Events", events_path %></a></li>
           </ul>
         </li>
 
-        <li class="has-dropdown">
+        <!-- <li class="has-dropdown">
           <a href="http://localhost:3000/payments">Payments</a>
           <ul class="dropdown">
             <li class="active"><a href="http://localhost:3000/payments/new">New Payment</a></li>
             <li><a href="http://localhost:3000/payments">All Payments</a></li>
           </ul>
-        </li>
+        </li> -->
 
       </ul>
     </section>

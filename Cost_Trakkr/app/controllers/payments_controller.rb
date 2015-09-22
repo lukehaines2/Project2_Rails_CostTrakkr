@@ -1,29 +1,31 @@
 class PaymentsController < ApplicationController
+  before_action :set_event
 
   def index
     @payments = Payment.all
   end
 
- def new
+  def new
     @payment = Payment.new
-    # @user_payment = User.find(params[:user_id])
   end
 
   def create
-    user = User.find(params[:user_id])
-    payment = Payment.new(params.require(:payment).permit(:amount))
+    @payment = @event.payments.new(params.require(:payment).permit(:amount, :user_id, :event_id))
 
-    user.payments << payment
-
-    if payment.save
-      redirect_to user
+    if @payment.save
+      redirect_to @event
     else
-      render 'new'
+      render :new
     end
   end
 
   def show
 
   end
+
+  private
+    def set_event
+      @event = Event.find(params[:event_id])
+    end
 
 end

@@ -11,13 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150918111906) do
+ActiveRecord::Schema.define(version: 20150922153311) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "events", force: :cascade do |t|
-    t.integer  "event_id"
     t.string   "name"
     t.date     "date"
     t.string   "location"
@@ -30,10 +29,14 @@ ActiveRecord::Schema.define(version: 20150918111906) do
     t.decimal  "amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.integer  "event_id"
   end
 
+  add_index "payments", ["event_id"], name: "index_payments_on_event_id", using: :btree
+  add_index "payments", ["user_id"], name: "index_payments_on_user_id", using: :btree
+
   create_table "users", force: :cascade do |t|
-    t.integer  "user_id"
     t.string   "name"
     t.decimal  "budget"
     t.decimal  "debts"
@@ -41,4 +44,6 @@ ActiveRecord::Schema.define(version: 20150918111906) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "payments", "events"
+  add_foreign_key "payments", "users"
 end
