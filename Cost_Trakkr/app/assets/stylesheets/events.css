@@ -1,0 +1,23 @@
+#existing-events {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 5.5%;
+}
+
+.individual-events {
+  list-style-type: none;
+  margin-bottom: 2%;
+}
+
+
+.edit-delete {
+  display: inline-block;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+
+.event-button {
+  display: inline-block;
+}

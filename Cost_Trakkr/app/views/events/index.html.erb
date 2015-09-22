@@ -1,5 +1,8 @@
-
-Existing Events:
-<% @events.each do |event| %>
-  <%= link_to(event.name, event) %>
-<% end %>
+<div id="existing-events">
+  <h3>Existing Events:</h3>
+  <ul>
+  <% @events.each do |event| %>
+    <li class="individual-events"><%= link_to(event.name, event) %></li>
+  <% end %>
+  </ul>
+</div>

@@ -20,13 +20,13 @@ ActiveRecord::Schema.define(version: 20150922153311) do
     t.string   "name"
     t.date     "date"
     t.string   "location"
-    t.decimal  "cost"
+    t.float    "cost"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "payments", force: :cascade do |t|
-    t.decimal  "amount"
+    t.float    "amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "user_id"
@@ -38,8 +38,8 @@ ActiveRecord::Schema.define(version: 20150922153311) do
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
-    t.decimal  "budget"
-    t.decimal  "debts"
+    t.float    "budget"
+    t.float    "debts"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

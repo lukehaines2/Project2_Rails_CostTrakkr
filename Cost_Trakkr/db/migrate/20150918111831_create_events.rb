@@ -4,7 +4,7 @@ class CreateEvents < ActiveRecord::Migration
       t.string :name
       t.date :date
       t.string :location
-      t.decimal :cost
+      t.float :cost
 
       t.timestamps null: false
     end

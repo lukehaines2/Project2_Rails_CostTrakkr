@@ -2,8 +2,8 @@ class CreateUsers < ActiveRecord::Migration
   def change
     create_table :users do |t|
       t.string :name
-      t.decimal :budget
-      t.decimal :debts
+      t.float :budget
+      t.float :debts
 
       t.timestamps null: false
     end
