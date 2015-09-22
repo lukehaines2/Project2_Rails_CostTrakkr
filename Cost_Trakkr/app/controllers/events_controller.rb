@@ -24,6 +24,7 @@ class EventsController < ApplicationController
   def edit
     @event = Event.find(params[:id])
   end
+
   def update
     event = Event.find(params[:id])
     if event.update(event_params)
@@ -32,7 +33,6 @@ class EventsController < ApplicationController
     redner :edit
     end
   end
-
 
   def destroy
     event = Event.find(params[:id]).destroy
@@ -43,6 +43,6 @@ class EventsController < ApplicationController
 
   def event_params
       params.require(:event).permit(:name, :date, :location, :cost)
-    end
+  end
 
 end

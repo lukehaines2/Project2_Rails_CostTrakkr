@@ -1,13 +1,16 @@
-<%= form_for @users do |form| %>
-  <%= form.label :name %>
-  <%= form.text_field :name %>
-  <br>
-  <%= form.label :budget %>
-  <%= form.text_field :budget %>
-  <br>
-  <%= form.label :debts %>
-  <%= form.text_field :debts %>
-  <br>
-  <%= form.submit 'Submit' %>
-
-<% end %>
+<div class="row">
+  <div class="small-6 large-centered columns">
+    <%= form_for @users do |form| %>
+      <%= form.label :name %>
+      <%= form.text_field :name %>
+      <br>
+      <%= form.label :budget %>
+      <%= form.text_field :budget %>
+      <br>
+      <%= form.label :debts %>
+      <%= form.text_field :debts %>
+      <br>
+      <%= form.submit 'Submit' %>
+    <% end %>
+  </div>
+</div>
