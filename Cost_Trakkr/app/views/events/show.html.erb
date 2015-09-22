@@ -1,8 +1,11 @@
-Selected Event:
-<h3>Name: <%= @event.name %></h3>
-<h3>Date: <%= @event.date %></h3>
-<h3>Location: <%= @event.location %></h3>
-<h3>Cost: £<%= @event.cost %></h3>
+<br>
+<ul class="pricing-table">
+  <li class="title">This Event: <%= @event.name %></li>
+  <li class="bullet-item">Location: <%= @event.location %></li>
+  <li class="bullet-item">Date: <%= @event.date %></li>
+  <li class="price">£<%= @event.cost %></li>
+  <li class="cta-button"><a class="button" href="#">Pay Now</a></li>
+</ul>
 
 <div class="edit-delete">
 <p><%= button_to 'Edit Event', edit_event_path(@event), method: :get %></p>
