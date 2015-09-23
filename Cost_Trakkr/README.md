@@ -9,7 +9,7 @@ This beautiful app can track payments for two things:
 1. Payments for multiple users to a new, or existing event. 
 2. Payments between users who want to lend each other money, or repay previous debts.
 
-![](app/assets/images/screenshot1.jpg)
+![](http://i.imgur.com/6jdWpqR.png)
 
 ####Approach / How it works
 
