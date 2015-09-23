@@ -2,7 +2,7 @@
 <div class="row">
   <div class="small-6 large-centered columns">
 <ul class="pricing-table">
-  <li class="title">Event: <%= @event.name %></li>
+  <li class="title">- <%= @event.name.upcase %> -</li>
   <li class="bullet-item">Location: <%= @event.location %></li>
   <li class="bullet-item">Date: <%= @event.date %></li>
   <li class="price">£<%= @event.cost %></li>
@@ -10,20 +10,20 @@
 </ul>
 </div>
 
-<div class="edit-delete">
-<%= button_to 'Edit Event', edit_event_path(@event), method: :get, :class => "button radius" %>
-<%= button_to 'Delete Event', event_path, method: :delete, :class => "button radius", data: {confirm: "Are you Sure?"} %>
-</div>
+
 
 
 <div class="edit-delete">
-  <h3>Payment History</h3>
+  <h3>- Payment History -</h3>
   <% @event.payments.each do |payment| %>
       <ul class="individual-events">
         <li class="individual-events"><%= payment.user.try(:name) %></li>
         <li class="individual-events">£ <%= payment.amount %></li>
       </ul>
-    
   <% end %>
-</ul>
+</div>
+
+<div class="edit-delete centering">
+<%= button_to 'Edit Event', edit_event_path(@event), method: :get, :class => "button radius" %>
+<%= button_to 'Delete Event', event_path, method: :delete, :class => "button radius", data: {confirm: "Are you Sure?"} %>
 </div>

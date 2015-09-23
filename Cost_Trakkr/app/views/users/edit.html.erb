@@ -1,13 +1,21 @@
-<%= form_for @user do |form| %>
-  <%= form.label :name %>
-  <%= form.text_field :name %>
-  <br>
-  <%= form.label :budget %>
-  <%= form.text_field :budget %>
-  <br>
-  <%= form.label :debts %>
-  <%= form.text_field :debts %>
-  <br>
-  <%= form.submit 'Update' %>
-
-<% end %>
+<br>
+<div class="row">
+  <div class="small-6 large-centered columns">
+    <div class="centering">
+      <h2>You Are Editing:</h2>
+      <h2>- <%= @user.name.upcase %> - </h2>
+    </div>
+    <%= form_for @user do |form| %>
+      <%= form.label :name %>
+      <%= form.text_field :name %>
+      <br>
+      <%= form.label :budget %>
+      <%= form.text_field :budget %>
+      <br>
+      <%= form.label :debts %>
+      <%= form.text_field :debts %>
+      <br>
+      <%= form.submit 'Update' %>
+      <% end %>
+    </div>
+</div>

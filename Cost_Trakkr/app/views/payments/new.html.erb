@@ -1,3 +1,4 @@
+<br>
 <%= form_for [@event, @payment] do |form| %>
   
   <% if @payment.errors.any? %>
@@ -8,13 +9,21 @@
       </div>
     <% end %>
   <% end %>
-
-  <%= form.label :amount %>
-  <%= form.text_field :amount %>
   
-  <%= form.label :user_id, "Please select a user" %>
-  <%= form.collection_select(:user_id, User.all, :id, :name) %>
-  <br>
-  <%= form.submit 'Submit' %>
-  
+  <div class="row">
+    <div class="small-6 large-centered columns">
+      <div class="centering">
+        <h2>Make A Payment To</h2>
+        <h2>- <%= @event.name.upcase %> - </h2>
+      </div>
+      <%= form.label :amount %>
+      <%= form.text_field :amount %>
+      
+      <%= form.label :user_id, "Please select a user" %>
+      <%= form.collection_select(:user_id, User.all, :id, :name) %>
+      <br>
+      <%= form.submit 'Submit' %>
+    </div>
+  </div>
 <% end %>
+
