@@ -1,13 +1,13 @@
 <div class="row">
-  <div class="small-6 large-centered columns">
-    Selected User:
-    <h3>Name: <%= @user.name %></h3>
+  <div class="small-6 large-centered columns centering">
+    <br>
+    <h2>Name: <%= @user.name %></h2>
     <h3>Budget: £<%= @user.budget %></h3>
     <h3>Debts: £<%= @user.debts %></h3>
   </div>
 </div>
 
 <div class="edit-delete">
-<p class="event-button"><%= button_to 'Edit User', edit_user_path(@user), method: :get %></p>
-<p class="event-button"><%= button_to 'Delete User', user_path, method: :delete, data: {confirm: "Are you Sure?"} %></p>
+<%= button_to 'Edit User', edit_user_path(@user), method: :get, :class => "button radius" %></p>
+<%= button_to 'Delete User', user_path, method: :delete, :class => "button radius", data: {confirm: "Are you Sure?"} %></p>
 </div>
