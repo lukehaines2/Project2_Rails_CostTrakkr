@@ -1,0 +1,22 @@
+<br>
+<div class="row">
+  <div class="small-6 large-centered columns">
+    <div class="centering">
+        <h2>- Create A New User -</h2>
+    </div>
+    <%= form_for @users do |form| %>
+      <%= form.label :name %>
+      <%= form.text_field :name %>
+      <br>
+      <%= form.label :budget %>
+      <%= form.text_field :budget %>
+      <br>
+      <%= form.label :debts %>
+      <%= form.text_field :debts %>
+      <br>
+      <!-- <div class="button centering"> -->
+      <%= form.submit 'Submit' %>
+      <!-- </div> -->
+    <% end %>
+  </div>
+</div>

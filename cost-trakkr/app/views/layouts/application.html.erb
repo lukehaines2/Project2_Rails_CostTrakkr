@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%= favicon_link_tag 'favicon.ico' %>
+    <title>Cost Trakkr</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+
+    <%= stylesheet_link_tag    "application", media: 'all' %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+    
+  </head>
+
+  <body>
+    <nav class="top-bar" data-topbar role="navigation">
+    <ul class="title-area">
+      <li class="name">
+        <h1><div id="topbar-font"><a href="http://localhost:3001/">Cost Trakkr</a></div></h1>
+      </li>
+    </ul>
+
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul class="right">
+
+        <li class="active"><a href="http://localhost:3001/">Home</a></li>
+        
+        <li class="has-dropdown">
+          <a href="http://localhost:3001/users">Users</a>
+          <ul class="dropdown">
+            <li class="active"><a href="http://localhost:3001/users/new">New User</a></li>
+            <li>
+              <%= link_to "All Users", users_path %>
+            </li>
+            </ul>
+          </li>
+
+        <li class="has-dropdown">
+          <a href="http://localhost:3001/events">Events</a>
+          <ul class="dropdown">
+            <li class="active"><a href="http://localhost:3001/events/new">New Event</a></li>
+            <li><%= link_to "All Events", events_path %></a></li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <a href="http://localhost:3001/payments">Payments</a>
+          <ul class="dropdown">
+            <li class="active"><a href="http://localhost:3001/payments/new">New Payment</a></li>
+            <li><a href="http://localhost:3001/events/14/payments">Payment History</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </section>
+</nav>
+    <%= yield %>
+    <%= render partial: 'shared/footer' %>
+  </body>
+</html>
+

@@ -1,0 +1,24 @@
+<br>
+<div class="row">
+  <div class="small-6 large-centered columns">
+    <div class="centering">
+      <h2>You Are Editing:</h2>
+      <h2>- <%= @event.name.upcase %> - </h2>
+    </div>
+    <%= form_for @event do |form| %>
+      <%= form.label :name %>
+      <%= form.text_field :name %>
+      <br>
+      <%= form.label :date %>
+      <%= form.text_field :date %>
+      <br>
+      <%= form.label :location %>
+      <%= form.text_field :location %>
+      <br>
+      <%= form.label :cost %>
+      <%= form.text_field :cost %>
+      <br>
+      <%= form.submit 'Update' %>
+    <% end %>
+  </div>
+</div>
